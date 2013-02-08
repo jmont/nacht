@@ -1,4 +1,14 @@
 Nacht::Application.routes.draw do
+  resources :cycles do
+    resources :songs do
+      resources :lyrics
+    end
+  end
+
+  resources :songs do
+    resources :lyrics
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
