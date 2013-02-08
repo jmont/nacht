@@ -1,0 +1,13 @@
+%h1 Listing cycles
+%table
+  %tr
+    %th
+    %th
+    %th
+  - @cycles.each do |cycle|
+    %tr
+      %td= link_to cycle.name, cycle
+      %td= link_to 'Edit', edit_cycle_path(cycle)
+      %td= link_to 'Destroy', cycle, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Cycle', new_cycle_path

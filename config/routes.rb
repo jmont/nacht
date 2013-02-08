@@ -1,4 +1,7 @@
 Nacht::Application.routes.draw do
+  resources :cycles
+
+
   resources :cycles do
     resources :songs do
       resources :lyrics

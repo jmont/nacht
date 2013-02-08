@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%h1= @cycle.name
+%h3= @cycle.composer
+
+- for s in @cycle.songs
+  .song
+    .name= s.name
+    .lyrics
+      - for l in s.lyrics
+        .language= l.language
+        .lyric= l.txt
+
+= link_to 'Edit', edit_cycle_path(@cycle) |
+= link_to 'Back', cycles_path
